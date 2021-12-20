@@ -9,7 +9,12 @@
         <li class="nav-item">
           <router-link to="/add" class="nav-link">Add</router-link>
         </li>
-      </div>
+        <li class="nav-item">
+          <router-link to="/login" class="nav-link">Login</router-link>
+        </li>
+        <li class="nav-item">
+          <router-link to="/logout" class="nav-link">Logout</router-link>
+        </li>      </div>
     </nav>
 
     <div class="container mt-3">

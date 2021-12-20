@@ -1,4 +1,5 @@
 import http from "../http-common";
+import authHeader from "./auth-header";
 
 class TutorialDataService {
     getAll() {
@@ -10,19 +11,19 @@ class TutorialDataService {
     }
 
     create(data) {
-        return http.post("/tutorials", data);
+        return http.post("/tutorials", data, {headers: authHeader()});
     }
 
     update(id, data) {
-        return http.put(`/tutorials/${id}`, data);
+        return http.put(`/tutorials/${id}`, data, {headers: authHeader()});
     }
 
     delete(id) {
-        return http.delete(`/tutorials/${id}`);
+        return http.delete(`/tutorials/${id}`, {headers: authHeader()});
     }
 
     deleteAll() {
-        return http.delete(`/tutorials`);
+        return http.delete(`/tutorials`, {headers: authHeader()});
     }
 
     findByTitle(title) {

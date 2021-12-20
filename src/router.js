@@ -21,6 +21,16 @@ export default new Router({
             path: "/add",
             name: "add",
             component: () => import("./components/AddTutorial")
+        },
+        {
+            path: "/login",
+            name: "login",
+            component: () => import("./components/Login")
+        },
+        {
+            path: "/logout",
+            name: "logout",
+            component: () => import("./components/Logout")
         }
     ]
 });
